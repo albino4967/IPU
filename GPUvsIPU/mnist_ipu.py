@@ -49,12 +49,6 @@ class Network(nn.Module):
              return x, loss
          return x
 
-def checked_gpu() :
-    if torch.cuda.is_available():
-        return torch.device('cuda')
-    else:
-        return torch.device('cpu')
-
 
 def train(model, train_loader, epoch) :
     pbar = tqdm(train_loader)
@@ -130,7 +124,6 @@ def main() :
     train_features, _ = next(iter(ipu_training_data))
     print(f'학습 데이터 배치 shape : {train_features.shape}')
 
-    device = checked_gpu()
     model = Network() #.to(device=device)
     optimizer = poptorch.optim.Adam(model.parameters(), lr=0.001)
 

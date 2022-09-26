@@ -19,27 +19,27 @@ poptorch 사용을 위한 설치 방법을 확인합니다.
 ## python virtual environment 사용
 
 IPU를 사용할 때 추천하는 방법입니다.   
-'''
+```
 virtualenv -p python3 poptorch_test      
 source poptorch_test/bin/activate   
 pip install -U pip   
 pip install <sdk_path>/poptorch_x.x.x.whl   
-'''
+```
 ## 환경변수 세팅
 
 
-'''
+```
 source poptorch_test/bin/activate   
 #2.6 부터는 poplar installation만 진행하면 됩니다.   
 source <path to poplar installation>/enable.sh   
 source <path to popart installation>/enable.sh   
-'''
+```
 
 
 ## 설치 확인
 
 다음 커맨드를 통하여 poptorch 설치 여부를 확인합니다.   
 작성한 예제 모델이 IPU에 컴파일이 된 후 설치가 잘 이루어졌다면 성공이 출력됩니다.
-<code>
+```
 python validation.py
-</code>
+```
