@@ -4,7 +4,7 @@ IPU 사용 시 옵션을 효율적으로 사용해야 최적의 성능을 이끌
 `GPUvsIPU` mnist를 GPU와 IPU 환경에서 구현하였습니다.   
 각각 학습 및 검증에서 사용되는 데이터의 shape을 통해 batch size를 확인하여 IPU option이 어떻게 작용하는지 확인합니다.
 
-|poptorch|torch|torchvision|python|
+|학습 환경|mini batch size|global batch size|
 |------|---|---|
 |IPU|32|-|
 |GPU|32|2048|
